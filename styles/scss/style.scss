@@ -37,6 +37,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
     color: #161A37;
     background-color: #D9D9D9;
     padding: {
@@ -65,11 +66,15 @@ footer {
 nav {
     a {
         color: #161A37;
-        font-size: large;
+        font-size: larger;
         margin: {
             left: 5px;
             right: 5px;
         }
+    }
+    margin: {
+        top: 10px;
+        bottom: 10px;
     }
 }
 
@@ -78,6 +83,7 @@ nav {
         left: 5px;
         right: 5px;
     }
+    color: #161A37;
 }
 
 #current {
@@ -94,9 +100,6 @@ nav {
     &:last-child {
         margin-bottom: 10px;
     }
-    &:first-child {
-        margin-top: 10px;
-    }
     div {
         margin: {
             left: 10px;
@@ -112,7 +115,7 @@ nav {
         vertical-align: top;
     }
     p {
-        font-size: large;
+        font-size: larger;
     }
 }
 .sideOne {
@@ -122,4 +125,55 @@ nav {
 .sideTwo {
     flex-flow: row-reverse;
     text-align: right;
+}
+
+@media (max-width: 700px){
+    .things {
+        display: block;
+        text-align: center;
+        margin-bottom: 20px;
+        div {
+            h2 {
+                margin: {
+                    top: 0.5em;
+                    bottom: 0.5em;
+                }
+            }
+            p {
+                margin: {
+                    top: 0;
+                    bottom: 0;
+                }
+            }
+        }
+        img {
+            max-width: 60%;
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .holder {
+        flex-flow: column;
+        img {
+            max-width: 60%;
+        }
+        .boxes {
+            &:first-child {
+                margin-top: 0px;
+            }
+        }
+        h2 {
+            margin: {
+                top: 0.5em;
+                bottom: 0.5em;
+            }
+        }
+    }
+    .boxes {
+        margin: {
+            left: 0px;
+            right: 0px;
+        }
+    }
 }

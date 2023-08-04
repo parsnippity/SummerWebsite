@@ -35,6 +35,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
   color: #161A37;
   background-color: #D9D9D9;
   padding-left: 5px;
@@ -54,9 +55,13 @@ footer p {
   margin-bottom: 0px;
 }
 
+nav {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
 nav a {
   color: #161A37;
-  font-size: large;
+  font-size: larger;
   margin-left: 5px;
   margin-right: 5px;
 }
@@ -64,6 +69,7 @@ nav a {
 #title {
   margin-left: 5px;
   margin-right: 5px;
+  color: #161A37;
 }
 
 #current {
@@ -79,9 +85,6 @@ nav a {
 .things:last-child {
   margin-bottom: 10px;
 }
-.things:first-child {
-  margin-top: 10px;
-}
 .things div {
   margin-left: 10px;
   margin-right: 10px;
@@ -95,7 +98,7 @@ nav a {
   vertical-align: top;
 }
 .things p {
-  font-size: large;
+  font-size: larger;
 }
 
 .sideOne {
@@ -106,4 +109,42 @@ nav a {
 .sideTwo {
   flex-flow: row-reverse;
   text-align: right;
+}
+
+@media (max-width: 700px) {
+  .things {
+    display: block;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .things div h2 {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+  }
+  .things div p {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .things img {
+    max-width: 60%;
+  }
+}
+@media (max-width: 600px) {
+  .holder {
+    flex-flow: column;
+  }
+  .holder img {
+    max-width: 60%;
+  }
+  .holder .boxes:first-child {
+    margin-top: 0px;
+  }
+  .holder h2 {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+  }
+  .boxes {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
 }/*# sourceMappingURL=style.css.map */
