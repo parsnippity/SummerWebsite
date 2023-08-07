@@ -1,5 +1,8 @@
 body {
   background-color: #161A37;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg %3E%3Cpolygon fill='%23161a37' points='1600 160 0 460 0 350 1600 50'/%3E%3Cpolygon fill='%23161a37' points='1600 260 0 560 0 450 1600 150'/%3E%3Cpolygon fill='%23161a37' points='1600 360 0 660 0 550 1600 250'/%3E%3Cpolygon fill='%23161a37' points='1600 460 0 760 0 650 1600 350'/%3E%3Cpolygon fill='%23161A37' points='1600 800 0 800 0 750 1600 450'/%3E%3C/g%3E%3C/svg%3E");
+  background-attachment: fixed;
+  background-size: cover;
   color: #D9D9D9;
   margin: 0px;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -16,8 +19,12 @@ img {
 
 .holder {
   display: flex;
+  justify-content: space-around;
   margin-left: 20px;
   margin-right: 20px;
+}
+.holder a {
+  max-width: 30%;
 }
 
 .boxes {
@@ -43,16 +50,24 @@ header {
 }
 
 footer {
+  display: flex;
+  flex-wrap: wrap;
   color: #161A37;
   background-color: #D9D9D9;
   padding-top: 10px;
   padding-bottom: 10px;
-  padding-left: 5px;
-  padding-right: 5px;
 }
 footer p {
   margin-top: 0px;
   margin-bottom: 0px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+footer a {
+  color: #161A37;
+  text-decoration: underline #161A37;
+  margin-left: 5px;
+  margin-right: 5px;
 }
 
 nav {
@@ -111,6 +126,11 @@ nav a {
   text-align: right;
 }
 
+.images {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
 @media (max-width: 700px) {
   .things {
     display: block;
@@ -132,6 +152,9 @@ nav a {
 @media (max-width: 600px) {
   .holder {
     flex-flow: column;
+  }
+  .holder a {
+    max-width: 100%;
   }
   .holder img {
     max-width: 60%;
